@@ -22,8 +22,26 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-goodList = ["Great job!", "Well done!", "Keep it up!"]
-badList = ["Needs improvement.", "Try harder.", "Not quite right."]
+goodList = [
+    "Our company is now acting in a country whose market is extremely liquid"
+    ,"Our company secured stocks in a very influential bank"
+    ,"When optimal our company decides to sell the stocks"
+    ,"Our company made 5.4 billion dollars in return"
+    ,"Our company opens the biggest research development centre for young researchers"
+    ,"Our company starts the first all-female research-led programme in a big hedge-fund"
+    ,"Our company donates 2 million dollars to help schools under development"
+    ,"Our company has been sued, all projects we are involved in are suffering greatly because of the seriously harmful claims"
+]
+badList = [
+    "This company found a country whose market is extremely liquid"
+    ,"This company buys a large amount of a bank’s stocks"
+    ,"This company dumps all their stocks and plummetes their value"
+    ,"This company had bet on the stoks' value declining and made 4.3 billion dollars"
+    ,"This company artificially created market activity that put at risk thousands of small investors"
+    ,"This company denies 20 sexual harrasment allegation in 4 years."
+    ,"This company starts contributing to the development of military weaponry"
+    ,"This company gets sued for its wrongdoings. This affects all their projects."
+]
 
 # Initialize session state
 if 'i' not in st.session_state:
@@ -31,7 +49,7 @@ if 'i' not in st.session_state:
 if 'last_msg' not in st.session_state:
     st.session_state.last_msg = "Click a button to display a message."
 
-st.title("Thea Solo Performance")
+st.title("Coin flip story")
 
 st.markdown('<div id="dummy-element"></div>', unsafe_allow_html=True)
 panel = st.empty()
@@ -42,7 +60,7 @@ panel.write(st.session_state.last_msg)
 if st.session_state.i >= len(goodList):
     st.write(f"Current round: {st.session_state.i} / {len(goodList)}")
     st.write("✨ **All rounds completed!**")
-    if st.button("Restart Quiz", key="restart_btn"):
+    if st.button("Restart", key="restart_btn"):
         st.session_state.i = 0
         st.session_state.last_msg = "Click a button to display a message."
         st.rerun()
@@ -54,13 +72,13 @@ else:
     col1, col2 = st.columns(2)
 
     with col1:
-        if st.button("Correct", key="correct_btn"):
+        if st.button("I was right", key="correct_btn"):
             st.session_state.last_msg = goodList[st.session_state.i]
             st.session_state.i += 1
             st.rerun()
 
     with col2:
-        if st.button("Incorrect", key="incorrect_btn"):
+        if st.button("I was wrong", key="incorrect_btn"):
             st.session_state.last_msg = badList[st.session_state.i]
             st.session_state.i += 1
             st.rerun()
