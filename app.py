@@ -23,14 +23,14 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 goodList = [
-    "Our company is now acting in a country whose market is extremely liquid"
-    ,"Our company secured stocks in a very influential bank"
-    ,"When optimal our company decides to sell the stocks"
-    ,"Our company made 5.4 billion dollars in return"
-    ,"Our company opens the biggest research development centre for young researchers"
-    ,"Our company starts the first all-female research-led programme in a big hedge-fund"
-    ,"Our company donates 2 million dollars to help schools under development"
-    ,"Our company has been sued, all projects we are involved in are suffering greatly because of the seriously harmful claims"
+    '"Our company is now acting in a country whose market is extremely liquid"'
+    ,'"Our company secured stocks in a very influential bank"'
+    ,'"When optimal our company decides to sell the stocks"'
+    ,'"Our company made 5.4 billion dollars in return"'
+    ,'"Our company opens the biggest research development centre for young researchers"'
+    ,'"Our company starts the first all-female research-led programme in a big hedge-fund"'
+    ,'"Our company donates 2 million dollars to help schools under development"'
+    ,'"Our company has been sued, all projects we are involved in are suffering greatly because of the seriously harmful claims"'
 ]
 badList = [
     "This company found a country whose market is extremely liquid"
