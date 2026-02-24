@@ -47,7 +47,7 @@ badList = [
 if 'i' not in st.session_state:
     st.session_state.i = 0
 if 'last_msg' not in st.session_state:
-    st.session_state.last_msg = "Click a button to display a message."
+    st.session_state.last_msg = "Wait for the coin flip and find out the next chapter of the story."
 
 st.title("Coin flip story")
 
@@ -59,10 +59,9 @@ panel.write(st.session_state.last_msg)
 # Check if we have finished all rounds
 if st.session_state.i >= len(goodList):
     st.write(f"Current round: {st.session_state.i} / {len(goodList)}")
-    st.write("✨ **All rounds completed!**")
     if st.button("Restart", key="restart_btn"):
         st.session_state.i = 0
-        st.session_state.last_msg = "Click a button to display a message."
+        st.session_state.last_msg = "Wait for the coin flip and find out the next chapter of the story."
         st.rerun()
 else:
     # Only show round counter if we've actually started (i > 0)
